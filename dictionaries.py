@@ -117,3 +117,28 @@ print(nums)
 #check if a value is in a set
 print(2 in nums)
 
+#But you cannot refer to an element in the set with an index position or a key
+#Add an new element to a set
+nums.add(8)
+print(nums)
+ 
+ #you  can add multiple set to existing dictionaries
+morenums = {5,6,7}
+nums.update(morenums) # adding morenums data to nums
+print(nums)
+
+# you can use update with list, tuples and dictionaries, too
+#merge two sets to create a new set
+one = {1,2,3,4,5}
+two = {5,6,7,8,9}
+
+mynewset = one.union(two)
+print(mynewset) # joins two data set one and two
+
+one.intersection_update(two) # compare the common(identical values) data between on one and two
+print(one) # print the common data 5 as output
+
+one = {1,2,3,4,5}
+two = {5,6,7,8,9}
+one.symmetric_difference_update(two) # compare the non identical data from one and two
+print(one)
