@@ -24,3 +24,31 @@ mahe_car.moves()
 
 
 class Airplane(Vehicle):
+    # for Airplane class we are inheriting
+    def moves(self):
+        print('flies along..')
+
+class Truck(Vehicle):
+    def moves(self):
+        print('Rumbles along..')
+
+class Golfcart(Vehicle):
+    pass
+
+cessna = Airplane('Cessna','skyhawk')
+tata = Truck('TATA','407')   
+golfwagon = Golfcart('yamaha','GC100')
+
+cessna.get_make_model()
+cessna.moves()
+tata.get_make_model()
+tata.moves()
+golfwagon.get_make_model()
+golfwagon.moves()   
+
+
+print('\n\n')
+
+for v in(my_car,mahe_car, cessna, tata,golfwagon):
+    v.get_make_model()
+    v.moves()
